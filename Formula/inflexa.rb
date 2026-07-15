@@ -12,7 +12,7 @@ class Inflexa < Formula
   # Explicit rather than scanned from the URL: the asset basenames end in
   # arch tokens (arm64, x64) that Homebrew's version detection could latch
   # onto, and the pinned value keeps livecheck comparisons exact.
-  version "0.1.0"
+  version "0.2.0"
   license "Apache-2.0"
 
   livecheck do
@@ -22,21 +22,23 @@ class Inflexa < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.1.0/inflexa-darwin-arm64"
-      sha256 "bd48be6107dd4f5931677d7f2c18a6193379b6ce94de94c6b0b1efcb29ba0f4a"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.2.0/inflexa-darwin-arm64"
+      sha256 "7b193e1ad49b4ea3d81df161cce4b1182d94dd5c0c1fbec4a20c6b7b79fee80f"
     end
     on_intel do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.1.0/inflexa-darwin-x64"
-      sha256 "ce4ec13e8ef43f3eabd57047bd95335d60f21af7645a8c06b0c653a84aa28c67"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.2.0/inflexa-darwin-x64"
+      sha256 "bf730635014eecff02898a4b84fba84736f13f333de713cb6c81bd95c98e9b05"
     end
   end
 
   on_linux do
-    # linux-arm64 is not in the release target matrix (cli/scripts/build.ts);
-    # Homebrew fails with a clear unsupported-platform error there.
+    on_arm do
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.2.0/inflexa-linux-arm64"
+      sha256 "7c789ea97547de079d8d71052adcf3484d8ca1f012d3e169f14e7a06adc2d28b"
+    end
     on_intel do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.1.0/inflexa-linux-x64"
-      sha256 "7abec28c1c04de185de37deeddf2fa7756cec9d4a56e7d26b427e315e6488db4"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.2.0/inflexa-linux-x64"
+      sha256 "b5d87f7c7b0f4574401073aa53881a2bc8c77dde453c31290d04ad819c47a0ff"
     end
   end
 
@@ -44,8 +46,8 @@ class Inflexa < Formula
   # redistribution of them — their license/NOTICE texts must ship alongside
   # the executable (see the build script's third-party-notices rationale).
   resource "third-party-notices" do
-    url "https://github.com/inflexa-ai/inflexa/releases/download/v0.1.0/THIRD-PARTY-NOTICES.txt"
-    sha256 "387a2c1784e4f0d16eb478e0750ca9e84027460fd86969f53d4e354b5ff40420"
+    url "https://github.com/inflexa-ai/inflexa/releases/download/v0.2.0/THIRD-PARTY-NOTICES.txt"
+    sha256 "454c2c8c59d7bf6c8be2081b37080b1d34ae44bc9926811e843bfb94ad796f73"
   end
 
   def install
