@@ -12,7 +12,7 @@ class Inflexa < Formula
   # Explicit rather than scanned from the URL: the asset basenames end in
   # arch tokens (arm64, x64) that Homebrew's version detection could latch
   # onto, and the pinned value keeps livecheck comparisons exact.
-  version "0.3.3"
+  version "0.3.4"
   license "Apache-2.0"
 
   livecheck do
@@ -22,23 +22,23 @@ class Inflexa < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.3/inflexa-darwin-arm64"
-      sha256 "aab3276372494cda5d2b1c03eca862650aee25a9661897bd97fc67fb04e7a86a"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.4/inflexa-darwin-arm64"
+      sha256 "3c1b2d8ad4df18199b23df1f85da3662eafc6137c7f38f6ed7f0dc52ba07123e"
     end
     on_intel do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.3/inflexa-darwin-x64"
-      sha256 "d0eccc59e92e919aea7b3ce7ac8c3fd4b45eb110794c8d85b20640da90b01b02"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.4/inflexa-darwin-x64"
+      sha256 "f57597ae992421c9bfda181d68a3ae44c5072f2354d9537007263c23131b8cc7"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.3/inflexa-linux-arm64"
-      sha256 "cf0ed4372070326edbc718d9fde05c910a12c6744a16e93767fd7564d1eb048e"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.4/inflexa-linux-arm64"
+      sha256 "ee957ba464406cd7bcf2d43ee82fd7b020f25f30f372946b7f156f4bbbcbfdce"
     end
     on_intel do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.3/inflexa-linux-x64"
-      sha256 "52bb7b667c7c6b956df8ff4dd199ea07a22219146219c068707cb10df7026616"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.4/inflexa-linux-x64"
+      sha256 "0d20ccd7a61527e7cf941fe1fe654bc58f83295b86a4156c25611a4b22bda421"
     end
   end
 
@@ -46,8 +46,8 @@ class Inflexa < Formula
   # redistribution of them — their license/NOTICE texts must ship alongside
   # the executable (see the build script's third-party-notices rationale).
   resource "third-party-notices" do
-    url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.3/THIRD-PARTY-NOTICES.txt"
-    sha256 "21d1f953f1c4ce1089cd43e9e8320ded340b2ea77281a309582c91360a38ea12"
+    url "https://github.com/inflexa-ai/inflexa/releases/download/v0.3.4/THIRD-PARTY-NOTICES.txt"
+    sha256 "f58de87d779c857e0fb5715fc98c8f94c0f57e970c69ed1c768541a10e1d6a8e"
   end
 
   def install
