@@ -8,11 +8,11 @@
 # binary-download formula is the standard channel — same model as oven-sh/bun.
 class Inflexa < Formula
   desc "Local-first AI agent for reproducible biological data analysis"
-  homepage "https://github.com/inflexa-ai/inflexa"
+  homepage "https://inflexa.ai"
   # Explicit rather than scanned from the URL: the asset basenames end in
   # arch tokens (arm64, x64) that Homebrew's version detection could latch
   # onto, and the pinned value keeps livecheck comparisons exact.
-  version "0.16.1"
+  version "0.17.0"
   license "Apache-2.0"
 
   livecheck do
@@ -22,23 +22,23 @@ class Inflexa < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.16.1/inflexa-darwin-arm64"
-      sha256 "dab8c53d0aa7adfb67c375fc267a5c0587d2c884fee18d918d39f42a0ad277b8"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.17.0/inflexa-darwin-arm64"
+      sha256 "c066a7cb30a6bd4b4acb27b928e37a2da6fa68e1cb1b6c6c581c7e220c4657a1"
     end
     on_intel do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.16.1/inflexa-darwin-x64"
-      sha256 "cd4f882a9c04042f16f360f02d028b3b63c5dc3a736dc4e6f0b8c72e343baeeb"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.17.0/inflexa-darwin-x64"
+      sha256 "bf92132e3b9194038c5be1261b3cce4265a7b701ff5bbcadfd99a2d8c13ef688"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.16.1/inflexa-linux-arm64"
-      sha256 "9892d2fb9190ce9f8382335399c02a9d8c0361d151b6e946407d969d7703669f"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.17.0/inflexa-linux-arm64"
+      sha256 "c4c940b31441137a0ca2c732317f0244dff8163ec5fc930869c8d603b99b2976"
     end
     on_intel do
-      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.16.1/inflexa-linux-x64"
-      sha256 "2507ff943988f39e74c5c060c723c0579fa29ed75b7c455f8d470de0544b69a0"
+      url "https://github.com/inflexa-ai/inflexa/releases/download/v0.17.0/inflexa-linux-x64"
+      sha256 "e99d93f5d0947776db41001fe15acf8062430bebc73dc1c5c3c6659f5eacb9e2"
     end
   end
 
@@ -46,8 +46,8 @@ class Inflexa < Formula
   # redistribution of them — their license/NOTICE texts must ship alongside
   # the executable (see the build script's third-party-notices rationale).
   resource "third-party-notices" do
-    url "https://github.com/inflexa-ai/inflexa/releases/download/v0.16.1/THIRD-PARTY-NOTICES.txt"
-    sha256 "0e704a5db60493042e3d4c4ca537c87d67584af5109045b6c432e5400f8a910c"
+    url "https://github.com/inflexa-ai/inflexa/releases/download/v0.17.0/THIRD-PARTY-NOTICES.txt"
+    sha256 "f3632283df419b17c198f2c9815c657a4b37dbb49f7f4d0f280f810bb22deb60"
   end
 
   def install
